@@ -6,6 +6,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+### WEB API that providers data
+
+The WEB API that providers data for this application is in api.zip, unzip this file, enter api directory in terminal and run `npm install`, `npm install sqlite3` to install dependencies and `npm start` to run.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
