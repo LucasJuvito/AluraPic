@@ -1,16 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Photo } from './photo';
 
-export interface PhotoArray {
-  allowComments: boolean;
-  comments: number;
-  description: string;
-  id: number;
-  likes: number;
-  postDate: string;
-  url: string;
-  userId: number;
-}
+const API = 'http://localhost:3000/';
 
 @Injectable({
   providedIn: 'root',
@@ -19,6 +11,6 @@ export class PhotoService {
   constructor(private http: HttpClient) {}
 
   listFromUser(userName: string) {
-    return this.http.get<PhotoArray[]>('http://localhost:3000/flavio/photos');
+    return this.http.get<Photo[]>(API + userName + '/photos');
   }
 }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { PhotoArray, PhotoService } from './photos/photo/photo.service';
+import { Photo } from './photos/photo/photo';
+import { PhotoService } from './photos/photo/photo.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { PhotoArray, PhotoService } from './photos/photo/photo.service';
 export class AppComponent {
   title = 'alurapic';
 
-  photos: PhotoArray[] = [];
+  photos: Photo[] = [];
 
   constructor(private photoService: PhotoService) {
     photoService
