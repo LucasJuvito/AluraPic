@@ -10,13 +10,7 @@ import { PhotoService } from './photos/photo/photo.service';
 export class AppComponent implements OnInit {
   title = 'alurapic';
 
-  photos: Photo[] = [];
-
   constructor(private photoService: PhotoService) {}
 
-  ngOnInit() {
-    this.photoService
-      .listFromUser('flavio')
-      .subscribe((photos) => (this.photos = photos));
-  }
+  ngOnInit() {}
 }
